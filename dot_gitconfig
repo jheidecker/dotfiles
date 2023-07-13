@@ -6,3 +6,7 @@
 [user]
 	name = Jay Heidecker
 	email = jay.heidecker@gmail.com
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
