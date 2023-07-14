@@ -1,0 +1,11 @@
+{{- if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+bw login jay.heidecker@gmail.com
+if [ $? -ne 0 ]; then
+  exit 0
+fi
+
+BW_SESSION=$(bw unlock --raw)
+
+{{ end -}}
