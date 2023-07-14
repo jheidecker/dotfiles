@@ -6,6 +6,6 @@ if [ $? -ne 0 ]; then
   exit 0
 fi
 
-BW_SESSION=$(bw unlock --raw)
+export BW_SESSION=$(bw unlock --raw)
 
 {{ end -}}
