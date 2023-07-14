@@ -19,6 +19,10 @@ export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
 export PATH="/Users/jheidecker/.cargo/bin:$PATH"
 export KUBE_EDITOR="nvim"
 
+bindkey '^[[A' fzf_history_search
+
+enable-fzf-tab
+
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
 # set descriptions format to enable group support
