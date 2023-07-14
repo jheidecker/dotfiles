@@ -1,0 +1,22 @@
+Host status.seekintoo.net
+    User statping
+    IdentityFile ~/.ssh/identities/status.seekintoo.net
+
+Host honeycomb00*
+    User debian
+    IdentityFile ~/.ssh/identities/debian_elk_cloud_init
+
+Host *.seekintoo.net dashboard.seekintoo.com iceking.seekintoo.com misp* pydio.seekintoo.com reports.seekintoo.com *.bogie.farm 
+    User jheidecker_seekintoo.com
+    IdentityFile ~/.ssh/identities/seekintoo.net
+
+Host keyman.seekintoo.net
+    HostName keyman.seekintoo.net
+    User keyman
+
+Host 172.26.*
+  IdentityFile ~/.ssh/identities/lemmy.management
+  User hawkwind
+
+Host *.potato.net ns* 10.* 184.* *.yk.ca foundry.tub20.com opmx* 10.20.92.7 2tzrcp2.seekintoo.net 2tzscp2.seekintoo.net
+PreferredAuthentications keyboard-interactive,password
