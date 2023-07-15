@@ -1,5 +1,4 @@
-{{ if eq .chezmoi.os "darwin" }}
-
+{{- if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
@@ -18,16 +17,4 @@ brew "fzf"
 brew "exa"
 EOF
 
-{{ else if eq .chezmoi.os "linux" }}
-{{   if eq .chezmoi.osRelease.id "ubuntu" }}
-
-#!/bin/bash
-
-sudo apt update
-sudo apt install nodejs npm
-npm install -g @bitwarden/cli
-
-{{   else if eq .chezmoi.osRelease.id "fedora" }}
-# Fedora-specific code
-{{   end }}
-{{ end }}
+{{ end -}}
