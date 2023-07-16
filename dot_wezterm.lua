@@ -3,6 +3,8 @@ local wezterm = require 'wezterm'
 
 local config = {}
 
+front_end = "OpenGL"
+
 if wezterm.config_builder then
   config = wezterm.config_builder()
 end
