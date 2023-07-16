@@ -1,0 +1,9 @@
+["Library/Fonts"]
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.tar.xz"
+    refreshPeriod = "168h"
+
+[".fonts"]
+    type = "archive"
+    url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.tar.xz"
+    refreshPeriod = "168h"
