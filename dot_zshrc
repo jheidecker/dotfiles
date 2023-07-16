@@ -1,4 +1,4 @@
-source /opt/homebrew/opt/antidote/share/antidote/antidote.zsh
+source .antidote/antidote.zsh
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 alias ls='exa --icons -hBba'
 alias vi='nvim'

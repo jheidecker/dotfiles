@@ -9,3 +9,11 @@
     url = "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/FiraCode.tar.xz"
     refreshPeriod = "168h"
     exclude = ["README.md"]
+
+[".antidote"]
+    type = "git-repo"
+    url = "https://github.com/mattmc3/antidote.git"
+    refreshPeriod = "168h"
+    [".antidote" .clone]
+        args = ["--depth", "1"]
+
