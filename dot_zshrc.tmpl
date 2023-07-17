@@ -3,6 +3,9 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+#add local bin to path
+export PATH="~/bin:$PATH"
+
 #load and configure antidote
 source ~/.antidote/antidote.zsh
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
