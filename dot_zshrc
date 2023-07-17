@@ -1,8 +1,15 @@
+
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+
 source .antidote/antidote.zsh
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
+
 alias ls='exa --icons -hBba'
 alias vi='nvim'
 alias vim='nvim'
+
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
@@ -19,9 +26,10 @@ export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
 export PATH="/Users/jheidecker/.cargo/bin:$PATH"
 export KUBE_EDITOR="nvim"
 
+#macOS
 bindkey '^[[A' fzf_history_search
-
-enable-fzf-tab
+#linux
+bindkey "${key[Up]}" fzf_history_search
 
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
@@ -33,3 +41,5 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
+
+nvim --headless '+Lazy! sync' +qa
