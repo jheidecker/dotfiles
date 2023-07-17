@@ -26,7 +26,6 @@ bindkey '^[[A' fzf_history_search
 bindkey "${key[Up]}" fzf_history_search
 
 #zstylez
-
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
 # set descriptions format to enable group support
@@ -52,8 +51,10 @@ export PATH="/Users/jheidecker/.cargo/bin:$PATH"
 
 {{ if eq .chezmoi.os "linux" -}}
 fpath=(/usr/share/zsh/site-functions $fpath)
-{{- end -}}
 
 {{ if eq .chezmoi.osRelease.id "debian" -}}
+#wezterm fix for debian12
 export XCURSOR_THEME=Adwaita
+{{- end -}}
+
 {{- end -}}
