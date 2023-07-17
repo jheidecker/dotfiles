@@ -12,13 +12,15 @@ config.colors = {
   scrollbar_thumb = '43465A'
 }
 
+config.front_end = "WebGpu"
+
 config.initial_cols = 120
 config.initial_rows = 30
 
 config.font = wezterm.font 'FiraCode Nerd Font Mono'
 {{ if eq .chezmoi.os "darwin" -}}
 config.font_size = 13
-{{- else -}}
+{{ else -}}
 config.font_size = 10
 {{ end -}}
 
