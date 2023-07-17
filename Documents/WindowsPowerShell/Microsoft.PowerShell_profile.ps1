@@ -1,1 +1,1 @@
-Invoke-Expression (&starship init powershell)
+eInvoke-Expression (&starship init powershell)
