@@ -2,13 +2,14 @@
 
 #assumes user jheidecker wtih sudo access
 
-sudo apt install zsh exa git curl fzf flatpak neovim? fuse
+sudo apt install -y zsh exa git curl fzf flatpak neovim
 sudo chsh -s /bin/zsh jheidecker
 curl -sS https://starship.rs/install.sh | sh
 sh -c "$(curl -fsLS get.chezmoi.io)"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install flathub org.wezfurlong.wezterm
-chezmoi init --apply jheidecker
+bin/chezmoi init --apply jheidecker
+
 
 #Include ssh secrets
 #needs bitwarden-cli < arm64 issues
@@ -18,5 +19,5 @@ chezmoi init --apply jheidecker
 #flatpak run org.wezfurlong.wezterm
 
 #aarch64 and parallels issues
-#mcli con mod 'Wired connection 1' ipv4.dns-options "single-request-reopen"
+#nmcli con mod 'Wired connection 1' ipv4.dns-options "single-request-reopen"
 #nmcli con up 'Wired connection 1'
