@@ -54,6 +54,6 @@ export PATH="/Users/jheidecker/.cargo/bin:$PATH"
 fpath=(/usr/share/zsh/site-functions $fpath)
 {{- end -}}
 
-{{ if eq .chezmoi.os.osRelease "debian" -}}
+{{ if eq .chezmoi.osRelease.id "debian" -}}
 export XCURSOR_THEME=Adwaita
 {{- end -}}
