@@ -10,3 +10,5 @@
 - `export BW_SESSION=$(bw unlock --raw)`
 - install chezmoi `brew install chezmoi`
 - `chezmoi init --apply --verbose https://github.com/jheidecker/dotfiles.git`
+
+Test change
