@@ -4,3 +4,6 @@ Library/Fonts
 {{ if ne .chezmoi.os "linux" }}
 .fonts
 {{ end }}
+{{ if (and (ne .chezmoi.os "linux") (ne .chezmoi.arch "arm64")) }}
+bin/executable_nvim-v0.9.1.aarch64.appimage
+{{ end }}

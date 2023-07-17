@@ -7,6 +7,8 @@ choco install -y chezmoi git starship wezterm nerd-fonts-firacode powershell-cor
 Install-Module -Name PSFzf -RequiredVersion 2.5.16
 #chezmoi
 chezmoi init --apply jheidecker
+#set env for nvim
+[Environment]::SetEnvironmentVariable('XDG_CONFIG_HOME', 'C:\Users\JayHeidecker\.config', 'User')
 
 # create wezterm shortcut
 $SourceFilePath = "C:\Program Files\WezTerm\wezterm-gui.exe"
