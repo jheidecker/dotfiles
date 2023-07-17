@@ -1,3 +1,4 @@
+#must be run as admin, assumes username is jayheidecker
 # install chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 # install all the things
@@ -18,3 +19,5 @@ $shortcut.Arguments = "start -- pwsh.exe"
 $shortcut.Save()
 
 # optional get ssh privates with bw-login, set env, chezmoi update
+# ripgrep? vscode settings sync? vivaldi settings sync?
+#Parallels broken because pshell profile is in //Mac; must be manual
