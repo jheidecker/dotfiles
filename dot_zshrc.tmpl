@@ -1,35 +1,28 @@
-
+#setup history
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 
+#load and configure antidote
 source .antidote/antidote.zsh
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
+#aliases
 alias ls='exa --icons -hBba'
 alias vi='nvim'
 alias vim='nvim'
 
+#queue starship!
 eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
-fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
-export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
-#export LDFLAGS="-L/opt/homebrew/opt/ruby@3.1/lib"
-#export CPPFLAGS="-I/opt/homebrew/opt/ruby@3.1/include"
-export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
-#export LDFLAGS="-L/opt/homebrew/opt/node@18/lib"
-#export CPPFLAGS="-I/opt/homebrew/opt/node@18/include"
-export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
-#export LDFLAGS="-L/opt/homebrew/opt/imagemagick@6/lib"
-#export CPPFLAGS="-I/opt/homebrew/opt/imagemagick@6/include"
-export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
-export PATH="/Users/jheidecker/.cargo/bin:$PATH"
+
 export KUBE_EDITOR="nvim"
 
 #macOS
 bindkey '^[[A' fzf_history_search
 #linux
 bindkey "${key[Up]}" fzf_history_search
+
+#zstylez
 
 # disable sort when completing `git checkout`
 zstyle ':completion:*:git-checkout:*' sort false
@@ -42,4 +35,18 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
-nvim --headless '+Lazy! sync' +qa
+#update nvim-lazy plugins (slow)
+#nvim --headless '+Lazy! sync' +qa
+
+{{ if eq .chezmoi.os "darwin" -}}
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
+export PATH="/Users/jheidecker/.cargo/bin:$PATH"
+{{- end -}}
+
+{{ if eq .chezmoi.os "linux" -}}
+fpath=(/usr/share/zsh/site-functions $fpath)
+{{- end -}}
