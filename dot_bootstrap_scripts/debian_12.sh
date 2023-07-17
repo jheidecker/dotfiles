@@ -2,8 +2,9 @@
 
 #assumes user jheidecker wtih sudo access
 
-sudo apt install -y zsh exa git curl fzf flatpak neovim
+sudo apt install -y zsh exa git curl fzf flatpak
 sudo chsh -s /bin/zsh jheidecker
+#logoff and on 
 curl -sS https://starship.rs/install.sh | sh
 sh -c "$(curl -fsLS get.chezmoi.io)"
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
