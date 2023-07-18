@@ -7,6 +7,13 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+config.use_fancy_tab_bar = false
+
+config.inactive_pane_hsb = {
+	saturation = 0.9,
+	brightness = 0.5,
+}
+
 config.color_scheme = 'catppuccin-mocha'
 config.colors = {
   scrollbar_thumb = '43465A'
