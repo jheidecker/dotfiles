@@ -1,7 +1,3 @@
-Host status.seekintoo.net
-    User statping
-    IdentityFile ~/.ssh/identities/status.seekintoo.net
-
 Host honeycomb00*
     User debian
     IdentityFile ~/.ssh/identities/debian_elk_cloud_init
