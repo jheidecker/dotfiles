@@ -6,10 +6,6 @@ Host *.seekintoo.net dashboard.seekintoo.com iceking.seekintoo.com misp* reports
     User jheidecker_seekintoo.com
     IdentityFile ~/.ssh/identities/seekintoo.net
 
-Host keyman.seekintoo.net
-    HostName keyman.seekintoo.net
-    User keyman
-
 Host 172.26.*
   IdentityFile ~/.ssh/identities/lemmy.management
   User hawkwind

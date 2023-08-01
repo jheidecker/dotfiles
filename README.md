@@ -65,3 +65,4 @@ sa-i : standalone-install
 - also tested on Win11 ARM64 (Parallels on M2)
 - portable zsh completions, unified completions (pwsh, zsh, ?)
 - script to check dev-env versions (is python the same here before you start developing?)
+- autoupdate lazy vim plugins?

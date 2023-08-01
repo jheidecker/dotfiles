@@ -2,6 +2,7 @@
 Library/Fonts
 {{ end }}
 {{ if ne .chezmoi.os "linux" }}
+Documents/PowerShell
 .fonts
 {{ end }}
 {{ if (and (ne .chezmoi.os "linux") (ne .chezmoi.arch "arm64")) }}

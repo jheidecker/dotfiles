@@ -38,6 +38,9 @@ zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
 # switch group using `,` and `.`
 zstyle ':fzf-tab:*' switch-group ',' '.'
 
+#portable completions
+fpath=($HOME/.zshfn $fpath)
+
 #update nvim-lazy plugins (slow)
 #nvim --headless '+Lazy! sync' +qa
 
