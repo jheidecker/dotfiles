@@ -6,9 +6,5 @@ Host *.seekintoo.net dashboard.seekintoo.com iceking.seekintoo.com misp* reports
     User jheidecker_seekintoo.com
     IdentityFile ~/.ssh/identities/seekintoo.net
 
-Host 172.26.*
-  IdentityFile ~/.ssh/identities/lemmy.management
-  User hawkwind
-
 Host 10.* 184.* opmx* 2tzrcp2*
 PreferredAuthentications keyboard-interactive,password
