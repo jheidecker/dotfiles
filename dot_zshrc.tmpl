@@ -7,6 +7,16 @@ SAVEHIST=1000
 export PATH="${ZDOTDIR:-$HOME}/bin:$PATH"
 export PATH="${ZDOTDIR:-$HOME}/.local/bin:$PATH"
 
+{{ if eq .chezmoi.os "darwin" -}}
+fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
+export PATH="/opt/homebrew/opt/python3/libexec/bin:$PATH"
+export PATH="/opt/homebrew/opt/ruby@3.2/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
+export PATH="/opt/homebrew/lib/ruby/gems/3.2.0/bin:$PATH"
+export PATH="/Users/jheidecker/.cargo/bin:$PATH"
+{{- end -}}
+
 #load and configure antidote
 source ~/.antidote/antidote.zsh
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
@@ -43,15 +53,6 @@ fpath=($HOME/.zshfn $fpath)
 
 #update nvim-lazy plugins (slow)
 #nvim --headless '+Lazy! sync' +qa
-
-{{ if eq .chezmoi.os "darwin" -}}
-fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
-export PATH="/opt/homebrew/opt/ruby@3.1/bin:$PATH"
-export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
-export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
-export PATH="/opt/homebrew/lib/ruby/gems/3.1.0/bin:$PATH"
-export PATH="/Users/jheidecker/.cargo/bin:$PATH"
-{{- end -}}
 
 {{ if eq .chezmoi.os "linux" -}}
 fpath=(/usr/share/zsh/site-functions $fpath)
