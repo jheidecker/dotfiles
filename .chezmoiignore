@@ -5,7 +5,9 @@ Library/Fonts
 Documents/PowerShell
 .fonts
 {{ end }}
-{{ if (and (ne .chezmoi.os "linux") (ne .chezmoi.arch "arm64")) }}
+{{ if ne .chezmoi.os "linux" }}
+{{ if ne .chezmoi.arch "arm64"}}
 bin/nvim
 bin/nvim.version
+{{ end }}
 {{ end }}
