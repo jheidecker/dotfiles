@@ -9,7 +9,7 @@ export PATH="${ZDOTDIR:-$HOME}/.local/bin:$PATH"
 
 {{ if eq .chezmoi.os "darwin" -}}
 fpath=(/opt/homebrew/share/zsh/site-functions $fpath)
-export PATH="/opt/homebrew/opt/python3/libexec/bin:$PATH"
+export PATH="/opt/homebrew/opt/python@3.12/libexec/bin:$PATH"
 export PATH="/opt/homebrew/opt/ruby@3.2/bin:$PATH"
 export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
