@@ -1,13 +1,10 @@
-{{ if ne .chezmoi.os "darwin" }}
+{{- if ne .chezmoi.os "darwin" }}
 Library/Fonts
-bin/nvim
-bin/nvim.version
-{{ end }}
-{{ if ne .chezmoi.os "linux" }}
+{{- else if ne .chezmoi.os "linux" }}
 Documents/PowerShell
 .fonts
-{{ end }}
-{{ if (and (ne .chezmoi.os "linux") (ne .chezmoi.arch "arm64")) }}
+{{-   if eq .chezmoi.arch "arm64" }}
 bin/nvim
 bin/nvim.version
-{{ end }}
+{{-   end }}
+{{- end }}
