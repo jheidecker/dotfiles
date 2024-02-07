@@ -22,9 +22,10 @@ source ~/.antidote/antidote.zsh
 antidote load ${ZDOTDIR:-$HOME}/.zsh_plugins.txt
 
 #aliases
-alias ls='exa --icons -hBba'
+alias ls='eza --icons -hBba'
 alias vi='nvim'
 alias vim='nvim'
+alias docker='podman'
 
 #queue starship!
 eval "$(starship init zsh)"
@@ -63,3 +64,5 @@ export XCURSOR_THEME=Adwaita
 {{- end -}}
 
 {{- end -}}
+
+export ZSH_FZF_HISTORY_SEARCH_END_OF_LINE=1
