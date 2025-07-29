@@ -32,6 +32,9 @@ Secondary:
 - podman
 - email / notes
 - oc, kubeadmin, helm
+- adobe apps
+- wondershare apps
+- serial (mac only)
 - other cross-platform apps with portable configs
   - 010 editor
   - adobe junk
@@ -51,7 +54,7 @@ sa-i : standalone-install
 
 | platform/shell  | chezmoi | starship  | vscode | vscode-copilot | nvim | lazy | wezterm | vivaldi | color theme | font | ssh | bw-cli | bootstrap |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| MacOS (M2) Ventura 13.4.1 [[zsh](https://www.zsh.org) 5.9]| :heavy_check_mark: 2.34.3 homebrew | :heavy_check_mark: 1.15.0 homebrew | :heavy_check_mark: sa-i (dmg) | :white_check_mark: | :heavy_check_mark: 0.9.1 LuaJIT 2.1.0-beta3 homebrew  | :white_check_mark: | :heavy_check_mark:  20230712-072601-f4abf8fd homebrew |  :heavy_check_mark: sa-i (dmg) | :white_check_mark: | :white_check_mark: | :white_check_mark: OpenSSH_9.0p1, LibreSSL 3.3.6 | :heavy_check_mark: 2023.7.0 homebrew | :heavy_minus_sign: |
+| MacOS (M2) Sequoia 15.5 [[zsh](https://www.zsh.org) 5.9]| :heavy_check_mark: 2.63.1 homebrew | :heavy_check_mark: 1.23 homebrew | :heavy_check_mark: sa-i (dmg) | :white_check_mark: | :heavy_check_mark: 0.11.3 LuaJIT 2.1.1753364724 homebrew  | :white_check_mark: | :heavy_check_mark:  20240203-110809-5046fc22 homebrew |  :heavy_check_mark: sa-i (dmg) | :white_check_mark: | :white_check_mark: | :white_check_mark: OpenSSH_9.9p2, LibreSSL 3.3.6 | :heavy_check_mark: 2024.1.0 homebrew | :heavy_minus_sign: |
 | Windows 11 Enterprise (x64) 10.0.22621 [[pwsh](https://github.com/PowerShell/PowerShell) 7.3.6]  | :heavy_check_mark: 2.35.0 choco | :heavy_check_mark: 1.15.0 choco | :heavy_check_mark: choco | :white_check_mark: | :heavy_check_mark: 0.9.1 LuaJIT 2.1.0-beta3 choco | :white_check_mark: | :heavy_check_mark: 20230712.72601.0 choco | :heavy_check_mark: choco | :white_check_mark: | :heavy_check_mark: choco | :white_check_mark: OpenSSH_for_Windows_8.6p1, LibreSSL 3.4.3 | :heavy_check_mark: 2023.7.0 choco | :heavy_minus_sign: |
 | Debian 12 (aarch64) [[zsh](https://www.zsh.org) 5.9] | :heavy_check_mark: 2.35.0 sa-i (curl) | :heavy_check_mark: 1.15.0 sa-i (curl) | :heavy_check_mark: sa-i (dl-deb) | :white_check_mark: | :white_check_mark: | :white_check_mark: | :heavy_check_mark: 20230712-072601-f4abf8fd flatpak | :heavy_check_mark: sa-i (dl-deb) | :white_check_mark: | :white_check_mark: | :white_check_mark: OpenSSH_9.2p1 Debian-2, OpenSSL 3.0.9 | :heavy_check_mark: 2023.7.0 (npm) | :heavy_minus_sign: |
 | NixOS Unstable (x64) (Jul 2023) [[zsh](https://www.zsh.org) 5.9] |  :heavy_check_mark: 2.34.3 nixpkgs | 
